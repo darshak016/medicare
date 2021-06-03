@@ -1,5 +1,5 @@
 import 'dart:ui';
-
+import 'custom_widget.dart';
 import 'package:flutter/material.dart';
 
 class Askuser extends StatefulWidget {
@@ -42,42 +42,14 @@ class _AskuserState extends State<Askuser> {
                 SizedBox(
                   height: 40,
                 ),
-                Container(
-                  width: (MediaQuery.of(context).size.width) * 0.7,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    gradient: LinearGradient(
-                      colors: [Color(0xff374ABE), Color(0xff64B6FF)],
-                      begin: Alignment.centerLeft,
-                      end: Alignment.centerRight,
-                    ),
-                  ),
-                  child: TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      'LOGIN',
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.symmetric(vertical: 5.0),
-                  width: (MediaQuery.of(context).size.width) * 0.7,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    gradient: LinearGradient(
-                      colors: [Color(0xff374ABE), Color(0xff64B6FF)],
-                      begin: Alignment.centerLeft,
-                      end: Alignment.centerRight,
-                    ),
-                  ),
-                  child: TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      'REGISTER',
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  ),
+                Cusbutton(
+                text: 'LOGIN',
+                onPressed: () {}),
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Cusbutton(
+                  text: 'REGISTER',
+                  onPressed: () {}),
                 ),
                 SizedBox(
                   height: 30,

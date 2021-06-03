@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'custom_widget.dart';
 
 class DoctorRegister extends StatefulWidget {
   @override
@@ -106,24 +107,9 @@ class _DoctorRegisterState extends State<DoctorRegister> {
             SizedBox(
               height: 20,
             ),
-            Container(
-              width: (MediaQuery.of(context).size.width) * 0.7,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                gradient: LinearGradient(
-                  colors: [Color(0xff374ABE), Color(0xff64B6FF)],
-                  begin: Alignment.centerLeft,
-                  end: Alignment.centerRight,
-                ),
-              ),
-              child: TextButton(
-                onPressed: () {},
-                child: Text(
-                  'REGISTER',
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-            ),
+            Cusbutton(
+                text: 'REGISTER',
+                onPressed: () {}),
             SizedBox(
               height: 10,
             ),
