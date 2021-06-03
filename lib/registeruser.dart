@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'custom_widget.dart';
 
 class UserRegister extends StatefulWidget {
   @override
@@ -95,24 +96,9 @@ class _UserRegisterState extends State<UserRegister> {
             SizedBox(
               height: 40,
             ),
-            Container(
-              width: (MediaQuery.of(context).size.width) * 0.7,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                gradient: LinearGradient(
-                  colors: [Color(0xff374ABE), Color(0xff64B6FF)],
-                  begin: Alignment.centerLeft,
-                  end: Alignment.centerRight,
-                ),
-              ),
-              child: TextButton(
-                onPressed: () {},
-                child: Text(
-                  'REGISTER',
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-            ),
+            Cusbutton(
+                text: 'REGISTER',
+                onPressed: () {}),
             SizedBox(
               height: 30,
             ),
@@ -131,9 +117,9 @@ class _UserRegisterState extends State<UserRegister> {
                     print('d');
                   },
                   child: Text(
-                    'LOGIN',
+                    'Login',
                     style:
-                        TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+                        TextStyle(fontSize: 17.0, color: Colors.blue),
                   ),
                 ),
               ],
