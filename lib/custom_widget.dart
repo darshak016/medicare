@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class Textwidget extends StatelessWidget {
   final String text;
   final double fsize;
-  Textwidget({required this.text, required this.fsize});
+  Textwidget({@required this.text, @required this.fsize});
 
   @override
   Widget build(BuildContext context) {
@@ -19,13 +19,14 @@ class Textwidget extends StatelessWidget {
 
 class Cusbutton extends StatelessWidget {
   final String text;
+  final double width;
   final GestureTapCallback onPressed;
-  Cusbutton({required this.text, required this.onPressed});
+  Cusbutton({@required this.text, @required this.onPressed, this.width});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: (MediaQuery.of(context).size.width) * 0.7,
+      width: (MediaQuery.of(context).size.width) * width,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         gradient: LinearGradient(
@@ -132,23 +133,26 @@ Container createDocWidget(String imgName, String docName) {
 class Doctorlist extends StatelessWidget {
   final String title;
   final String imgName;
-   final GestureTapCallback onTap;
-  Doctorlist({required this.title, required this.imgName,required this.onTap});
+  final GestureTapCallback onTap;
+  Doctorlist(
+      {@required this.title, @required this.imgName, @required this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 130,
+      width: 150,
       child: InkWell(
         onTap: onTap,
         child: Column(
           children: <Widget>[
             CircleAvatar(
-                backgroundColor: Colors.blue,
-                backgroundImage: AssetImage('assets/$imgName'),
-                radius: 50,
-              ),
-            
+              backgroundColor: Colors.white,
+              backgroundImage: AssetImage('assets/$imgName'),
+              radius: 50,
+            ),
+            SizedBox(
+              height: 7,
+            ),
             Text(
               "$title",
               style: TextStyle(fontWeight: FontWeight.w800, fontSize: 17),
