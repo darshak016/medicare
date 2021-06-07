@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'custom_widget.dart';
 
 class ConfApp extends StatefulWidget {
-  const ConfApp({Key? key}) : super(key: key);
+  const ConfApp({Key key}) : super(key: key);
 
   @override
   _ConfAppState createState() => _ConfAppState();
